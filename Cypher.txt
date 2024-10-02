@@ -1,0 +1,715 @@
+CREATE (m:Materials {name: 'Materials'}) 
+
+CREATE (bc:Material {name: 'BC'}) 
+CREATE (fcbc:Material {name: 'FCBC'}) 
+CREATE (zcbc:Material {name: 'ZCBC'}) 
+CREATE (lcbc:Material {name: 'LCBC'}) 
+
+CREATE (bc)-[:PART_OF]->(m) 
+CREATE (fcbc)-[:PART_OF]->(m) 
+CREATE (zcbc)-[:PART_OF]->(m) 
+CREATE (lcbc)-[:PART_OF]->(m) 
+
+CREATE (p1:PRemoval {PRemoval: 17, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 3, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p1) 
+
+CREATE (p2:PRemoval {PRemoval: 17, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p2) 
+
+CREATE (p3:PRemoval {PRemoval: 25, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 7, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p3) 
+
+CREATE (p4:PRemoval {PRemoval: 37, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 9, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p4) 
+
+CREATE (p5:PRemoval {PRemoval: 40, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 11, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p5) 
+
+CREATE (p6:PRemoval {PRemoval: 49, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 3, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p6) 
+
+CREATE (p7:PRemoval {PRemoval: 32, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p7) 
+
+CREATE (p8:PRemoval {PRemoval: 25, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 7, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p8) 
+
+CREATE (p9:PRemoval {PRemoval: 27, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 9, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p9) 
+
+CREATE (p10:PRemoval {PRemoval: 25, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 11, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p10) 
+
+CREATE (p11:PRemoval {PRemoval: 60, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 3, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p11) 
+
+CREATE (p12:PRemoval {PRemoval: 60, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p12) 
+
+CREATE (p13:PRemoval {PRemoval: 65, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 7, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p13) 
+
+CREATE (p14:PRemoval {PRemoval: 55, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 9, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p14) 
+
+CREATE (p15:PRemoval {PRemoval: 48, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 11, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p15) 
+
+CREATE (p16:PRemoval {PRemoval: 132, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 3, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p16) 
+
+CREATE (p17:PRemoval {PRemoval: 122, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p17) 
+
+CREATE (p18:PRemoval {PRemoval: 100, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 7, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p18) 
+
+CREATE (p19:PRemoval {PRemoval: 75, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 9, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p19) 
+
+CREATE (p20:PRemoval {PRemoval: 62, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 11, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p20) 
+
+CREATE (p21:PRemoval {PRemoval: 5, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 10, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p21) 
+
+CREATE (p22:PRemoval {PRemoval: 5, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 50, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p22) 
+
+CREATE (p23:PRemoval {PRemoval: 14, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 100, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p23) 
+
+CREATE (p24:PRemoval {PRemoval: 16, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 200, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p24) 
+
+CREATE (p25:PRemoval {PRemoval: 17, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p25) 
+
+CREATE (p26:PRemoval {PRemoval: 30, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 600, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p26) 
+
+CREATE (p27:PRemoval {PRemoval: 5, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 10, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p27) 
+
+CREATE (p28:PRemoval {PRemoval: 15, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 50, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p28) 
+
+CREATE (p29:PRemoval {PRemoval: 17, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 100, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p29) 
+
+CREATE (p30:PRemoval {PRemoval: 21, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 200, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p30) 
+
+CREATE (p31:PRemoval {PRemoval: 35, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p31) 
+
+CREATE (p32:PRemoval {PRemoval: 38, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 600, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p32) 
+
+CREATE (p33:PRemoval {PRemoval: 5, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 10, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p33) 
+
+CREATE (p34:PRemoval {PRemoval: 21, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 50, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p34) 
+
+CREATE (p35:PRemoval {PRemoval: 48, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 100, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p35) 
+
+CREATE (p36:PRemoval {PRemoval: 60, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 200, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p36) 
+
+CREATE (p37:PRemoval {PRemoval: 75, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p37) 
+
+CREATE (p38:PRemoval {PRemoval: 81, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 600, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p38) 
+
+CREATE (p39:PRemoval {PRemoval: 5, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 10, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p39) 
+
+CREATE (p40:PRemoval {PRemoval: 21, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 50, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p40) 
+
+CREATE (p41:PRemoval {PRemoval: 48, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 100, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p41) 
+
+CREATE (p42:PRemoval {PRemoval: 97, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 200, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p42) 
+
+CREATE (p43:PRemoval {PRemoval: 127, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p43) 
+
+CREATE (p44:PRemoval {PRemoval: 137, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 600, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p44) 
+
+CREATE (p45:PRemoval {PRemoval: 25, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 0.5, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p45) 
+
+CREATE (p46:PRemoval {PRemoval: 25, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 1, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p46) 
+
+CREATE (p47:PRemoval {PRemoval: 17, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p47) 
+
+CREATE (p48:PRemoval {PRemoval: 16, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p48) 
+
+CREATE (p49:PRemoval {PRemoval: 16, PRemoval_unit: 'mg/g'}) 
+CREATE (bc)-[:REMOVED { 
+    sorbent_conc: 4, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p49) 
+
+CREATE (p50:PRemoval {PRemoval: 115, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 0.5, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p50) 
+
+CREATE (p51:PRemoval {PRemoval: 70, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 1, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p51) 
+
+CREATE (p52:PRemoval {PRemoval: 35, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p52) 
+
+CREATE (p53:PRemoval {PRemoval: 30, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p53) 
+
+CREATE (p54:PRemoval {PRemoval: 25, PRemoval_unit: 'mg/g'}) 
+CREATE (fcbc)-[:REMOVED { 
+    sorbent_conc: 4, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p54) 
+
+CREATE (p55:PRemoval {PRemoval: 161, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 0.5, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p55) 
+
+CREATE (p56:PRemoval {PRemoval: 100, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 1, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p56) 
+
+CREATE (p57:PRemoval {PRemoval: 75, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p57) 
+
+CREATE (p58:PRemoval {PRemoval: 65, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p58) 
+
+CREATE (p59:PRemoval {PRemoval: 50, PRemoval_unit: 'mg/g'}) 
+CREATE (zcbc)-[:REMOVED { 
+    sorbent_conc: 4, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p59) 
+
+CREATE (p60:PRemoval {PRemoval: 170, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 0.5, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p60) 
+
+CREATE (p61:PRemoval {PRemoval: 140, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 1, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p61) 
+
+CREATE (p62:PRemoval {PRemoval: 125, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 2, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p62) 
+
+CREATE (p63:PRemoval {PRemoval: 120, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 3, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p63) 
+
+CREATE (p64:PRemoval {PRemoval: 90, PRemoval_unit: 'mg/g'}) 
+CREATE (lcbc)-[:REMOVED { 
+    sorbent_conc: 4, 
+    sorbent_conc_unit: 'g/L', 
+    pH: 5, 
+    time: 24, 
+    time_unit: 'h', 
+    initial_P_conc: 400, 
+    initial_P_conc_unit: 'mg/L' 
+}]->(p64)

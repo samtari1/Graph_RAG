@@ -1,0 +1,25 @@
+Bob is Alice's friend since 2020
+Alice is Bob's friend since 2020
+
+There is a place called Paris
+Bob lives in Paris since 2018
+Bob is 25 years old
+
+There is a place called London
+Alice lives London
+Alice 30 years old
+
+Bob is Joe's friend
+Joe is Bob's friend
+
+There is a place called New York
+Joe lives in New York
+Joe is 28 years old
+
+Bob is Jack's friend
+Jack is Bob's friend
+
+Jack lives in New York
+Jack is 18 years old
+
+ 
